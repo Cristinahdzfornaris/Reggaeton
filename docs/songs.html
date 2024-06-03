@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs of the Decade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Popular Songs of the <span id="decade-title"></span></h1>
+    </header>
+    <main>
+        <div id="songs-container">
+            <!-- Aquí se cargarán las canciones dinámicamente -->
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+    <script>
+        // Obtener el parámetro de la década de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const decade = urlParams.get('decade');
+        console.log('Decade:',decade);
+        // Mostrar la década en el título
+            if (decade){
+        document.getElementById('decade-title').textContent = decade;
+    }
+            else{document.getElementById('decade-title').textContent = "Unknown";
+
+            }
+
+        // Lista de canciones de ejemplo (esto debería venir de una base de datos o API)
+        const songs = {
+            '1990s': ['Song 4', 'Song 5', 'Song 6'],
+            '2000s': ['Song 7', 'Song 8', 'Song 9'],
+            '2010s': ['Song 10', 'Song 11', 'Song 12'],
+            '2020s': ['Song 13', 'Song 14', 'Song 15'],
+        };
+
+        // Obtener las canciones de la década seleccionada
+        const songList = songs[decade] || [];
+
+        // Mostrar las canciones en la página
+        const songsContainer = document.getElementById('songs-container');
+        songList.forEach(song => {
+            const songElement = document.createElement('p');
+            songElement.textContent = song;
+        songsContainer.appendChild(songElement);
+        });
+    </script>
+</body>
+</html>

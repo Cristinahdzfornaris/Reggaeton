@@ -1,0 +1,54 @@
+{
+    "artists": [
+        {
+            "name": "Daddy Yankee",
+            "songs": [
+                {
+                    "title": "Gasolina",
+                    "lyric": "A ella le gusta la gasolina, dame más gasolina."
+                },
+                {
+                    "title": "Lo Que Pasó, Pasó",
+                    "lyric": "Lo que pasó, pasó, entre tú y yo."
+                },
+                {
+                    "title": "Rompe",
+                    "lyric": "Rompe, rompe, rompe, bien guillao."
+                },
+                {
+                    "title": "Llamado de Emergencia",
+                    "lyric": "Este es un llamado de emergencia, baby."
+                },
+                {
+                    "title": "Ella Me Levantó",
+                    "lyric": "Y ella me levantó, cuando me caí."
+                }
+            ]
+        },
+        {
+            "name": "Don Omar",
+            "songs": [
+                {
+                    "title": "Dile",
+                    "lyric": "Dile que bailando te conocí, cuéntale."
+                },
+                {
+                    "title": "Danza Kuduro",
+                    "lyric": "La mano arriba, cintura sola."
+                },
+                {
+                    "title": "Virtual Diva",
+                    "lyric": "Eres virtual, tú no existes."
+                },
+                {
+                    "title": "Pobre Diabla",
+                    "lyric": "Esa hembra es mala, se siente sola."
+                },
+                {
+                    "title": "Taboo",
+                    "lyric": "Taboo, taboo, es el ritmo que quiero."
+                }
+            ]
+        }
+    ]
+}
