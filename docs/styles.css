@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #332769;
+    color: rgb(0, 0, 0);
     padding: 1em 0;
 }
 
@@ -22,7 +22,7 @@ header {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #2d1858;
     color: white;
     border: none;
     border-radius: 100px;
@@ -35,7 +35,7 @@ header {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #2d1858;
     color: white;
     border: none;
     border-radius: 90px;
@@ -43,7 +43,7 @@ header {
 }
 
 .decade-button:hover {
-    background-color: #45a049;
+    background-color: #2a286a;
 }
 
 ul {
@@ -62,4 +62,55 @@ li {
     position: absolute;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     white-space: nowrap;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#word-cloud-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: white;
+    overflow: hidden;
+}
+
+.word {
+    position:absolute;
+    color: #f0e3e3;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+.container1 {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #dfecdf;
+    border-radius: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+h1 {
+    text-align: center;
+    color: #0a0505;
 }

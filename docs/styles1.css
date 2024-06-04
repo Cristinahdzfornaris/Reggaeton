@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    margin: 20px 0;
+}
+
+#word-cloud {
+    width: 90%;
+    height: 600px;
+    position: relative;
+    background-color: white;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.word {
+    position: absolute;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

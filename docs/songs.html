@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songs of the Decade</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Historia del reguetón</title>
 </head>
 <body>
-    <header>
-        <h1>Popular Songs of the <span id="decade-title"></span></h1>
-    </header>
-    <main>
-        <div id="songs-container">
-            <!-- Aquí se cargarán las canciones dinámicamente -->
-        </div>
-    </main>
-    <script src="scripts.js"></script>
-    <script>
-        // Obtener el parámetro de la década de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const decade = urlParams.get('decade');
-        console.log('Decade:',decade);
-        // Mostrar la década en el título
-            if (decade){
-        document.getElementById('decade-title').textContent = decade;
+  <h2>[Nombre del artista]</h2>
+  <p>[Biografía del artista]</p>
+  <button onclick="mostrarLetra('Canción 1')">Ver letra</button>
+
+  <div id="modal-letra" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>[Nombre de la canción]</h3>
+      <p>[Letra de la canción]</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarLetra(nombreCancion) {
+      const modal = document.getElementById('modal-letra');
+      modal.style.display = 'block';
+
+      const titulo = modal.querySelector('.modal-content h3');
+      const letra = modal.querySelector('.modal-content p');
+
+      titulo.textContent = nombreCancion;
+      letra.textContent = '[Letra de la canción]'; // Aquí debes cargar la letra de la canción
     }
-            else{document.getElementById('decade-title').textContent = "Unknown";
 
-            }
+    const closeButton = document.querySelector('.modal .close');
+    closeButton.onclick = function() {
+      const modal = document.getElementById('modal-letra');
+      modal.style.display = 'none';
+    };
 
-        // Lista de canciones de ejemplo (esto debería venir de una base de datos o API)
-        const songs = {
-            '1990s': ['Song 4', 'Song 5', 'Song 6'],
-            '2000s': ['Song 7', 'Song 8', 'Song 9'],
-            '2010s': ['Song 10', 'Song 11', 'Song 12'],
-            '2020s': ['Song 13', 'Song 14', 'Song 15'],
-        };
-
-        // Obtener las canciones de la década seleccionada
-        const songList = songs[decade] || [];
-
-        // Mostrar las canciones en la página
-        const songsContainer = document.getElementById('songs-container');
-        songList.forEach(song => {
-            const songElement = document.createElement('p');
-            songElement.textContent = song;
-        songsContainer.appendChild(songElement);
-        });
-    </script>
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
 </body>
 </html>
